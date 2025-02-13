@@ -1,0 +1,381 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.cityscape {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sky and Clouds */
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #87CEEB;
+}
+
+.sun {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background-color: #F2C464;
+    border-radius: 50%;
+}
+
+.moon {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    width: 100px;
+    height: 100px;
+    background-color: #C9E4CA;
+    border-radius: 50%;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#fff, #fff), radial-gradient(#fff, #fff);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+}
+
+.clouds {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cloud {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.cloud1 {
+    top: 10%;
+    left: 10%;
+}
+
+.cloud2 {
+    top: 20%;
+    left: 40%;
+}
+
+.cloud3 {
+    top: 30%;
+    left: 70%;
+}
+
+/* Buildings and Roads */
+.buildings {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.building {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background-color: #ccc;
+}
+
+.building1 {
+    left: 10%;
+}
+
+.building2 {
+    left: 40%;
+}
+
+.building3 {
+    left: 70%;
+}
+
+.roads {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #666;
+}
+
+.vehicle {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color: #999;
+}
+
+.vehicle1 {
+    left: 20%;
+}
+
+.vehicle2 {
+    left: 60%;
+}
+
+/* Sidewalks and Benches */
+.sidewalks {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #ccc;
+}
+
+.bench {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: #666;
+}
+
+.bench:nth-child(1) {
+    left: 20%;
+}
+
+.bench:nth-child(2) {
+    left: 60%;
+}
+
+/* Couples and Animals */
+.couples {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.couple {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: #f0f0f0;
+}
+
+.couple1 {
+    left: 15%;
+}
+
+.couple2 {
+    left: 55%;
+}
+
+.animal {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background-color: #ccc;
+}
+
+.animal1 {
+    left: 30%;
+}
+
+/* Heart-Shaped Decorations */
+.decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.heart-balloon {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 50px;
+    height: 50px;
+    background-color: #ff69b4;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.heart-light {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    width: 30px;
+    height: 30px;
+    background-color: #ff69b4;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Interactive Elements */
+.interactive-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.interactive-button:hover {
+    background-color: #ff99cc;
+    transform: scale(1.1);
+}
+
+/* Animated GIFs */
+.gif {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.gif1 {
+    top: 40%;
+    left: 20%;
+}
+
+.gif2 {
+    top: 50%;
+    left: 60%;
+}
+
+/* Weather Effects */
+.weather-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: snowfall 5s linear infinite;
+}
+
+.heart-animation {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff69b4;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: heartfloat 3s ease-in-out infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 100vh;
+    }
+}
+
+@keyframes heartfloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Parallax Scrolling */
+.cityscape {
+    perspective: 1000px;
+}
+
+.buildings, .roads, .sidewalks, .couples, .decorations {
+    transform-style: preserve-3d;
+}
+
+/* Hover Effects */
+.interactive-button:hover {
+    transform: scale(1.1);
+}
+
+/* Flip Animations */
+.flip-card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+}
+
+.flip-card .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card .flip-card-inner:hover {
+    transform: rotateY(180deg);
+}
+
+.flip-card .flip-card-front, .flip-card .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card .flip-card-front {
+    background-color: #fff;
+}
+
+.flip-card .flip-card-back {
+    background-color: #ff69b4;
+    transform: rotateY(180deg);
+}
+
+/* Lighting Effects */
+.streetlight {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    background-color: #ffcc00;
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
+      background: linear-gradient(to bottom, #ffb7c5, #ff69b4);
+    }
+
+    /* Sun animation */
+    .sun {
+      position: absolute;
+      top: 50px;
+      right: 100px;
+      width: 80px;
+      height: 80px;
+      background: #FFD700;
+      border-radius: 50%;
+      animation: glow 3s infinite alternate;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Sun hover effect */
+    .sun:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 20px #FFD700; }
+      to { box-shadow: 0 0 40px #FFD700; }
+    }
+
+    /* Floating hearts */
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff1493;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Heart hover: increases size */
+    .heart:hover {
+      transform: scale(1.3) rotate(45deg);
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff1493;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      left: -10px;
+    }
+
+    .heart::after {
+      top: -10px;
+    }
+
+    /* Multiple floating hearts with different animations */
+    .heart:nth-child(1) {
+      left: 10%;
+      animation: float 6s infinite;
+    }
+
+    .heart:nth-child(2) {
+      left: 30%;
+      animation: float 8s infinite 1s;
+    }
+
+    .heart:nth-child(3) {
+      left: 50%;
+      animation: float 7s infinite 2s;
+    }
+
+    .heart:nth-child(4) {
+      left: 70%;
+      animation: float 9s infinite 3s;
+    }
+
+    @keyframes float {
+      0% { top: 100%; opacity: 1; }
+      100% { top: -10%; opacity: 0; }
+    }
+
+    /* Buildings */
+    .cityscape {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60%;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+
+    .building {
+      background: #ff69b4;
+      border: 2px solid #fff;
+      position: relative;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Flip animation for buildings */
+    .building:hover {
+      transform: rotateY(180deg);
+    }
+
+    .building-1 {
+      width: 100px;
+      height: 200px;
+    }
+
+    .building-2 {
+      width: 120px;
+      height: 300px;
+    }
+
+    .building-3 {
+      width: 150px;
+      height: 250px;
+    }
+
+    /* Windows */
+    .window {
+      width: 15px;
+      height: 20px;
+      background: #fff;
+      margin: 10px;
+      display: inline-block;
+      animation: twinkle 2s infinite;
+      transition: background 0.3s ease-in-out;
+    }
+
+    /* Window hover effect */
+    .window:hover {
+      background: #ffddf4;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    /* Ground/Road */
+    .ground {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: #333;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Road markings */
+    .road-line {
+      width: 50px;
+      height: 5px;
+      background: #fff;
+      margin: 0 20px;
+      animation: moveLine 2s linear infinite;
+    }
+
+    @keyframes moveLine {
+      from { transform: translateX(100vw); }
+      to { transform: translateX(-100px); }
+    }
+
+    /* Couple */
+    .couple {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: walk 10s linear infinite;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .person {
+      width: 20px;
+      height: 40px;
+      background: #e1cad5;
+      display: inline-block;
+      margin: 0 5px;
+      position: relative;
+    }
+
+    .person::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      background: #ff69b4;
+      border-radius: 50%;
+    }
+
+    /* Hover effect to make the couple "float" */
+    .couple:hover {
+      transform: translateX(-50%) scale(1.1);
+    }
+
+    @keyframes walk {
+      0% { left: -50px; }
+      100% { left: calc(100% + 50px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="sun"></div>
+  
+  <div class="hearts">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+  <div class="cityscape">
+    <div class="building building-1">
+      <div class="window"></div>
+      <div class="window"></div>
+      <div class="window"></div>
+      <div class="window"></div>
+    </div>
+    <div class="building building-2">
+      <div class="window"></div>
+      <div class="window"></div>
+      <div class="window"></div>
+      <div class="window"></div>
+      <div class="window"></div>
+      <div class="window"></div>
+    </div>
+    <div class="building building-3">
+      <div class="window"></div>
+      <div class="window"></div>
+      <div class="window"></div>
+      <div class="window"></div>
+      <div class="window"></div>
+    </div>
+  </div>
+
+  <div class="ground">
+    <div class="road-line"></div>
+    <div class="road-line"></div>
+    <div class="road-line"></div>
+    <div class="road-line"></div>
+  </div>
+
+  <div class="couple">
+    <div class="person"></div>
+    <div class="person"></div>
+  </div>
+</body>
+</html>
