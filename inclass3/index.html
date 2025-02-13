@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Cityscape</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <script src="script.js" defer></script> -->
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #ff6b81, #ffe4e1);
+        }
+        .cityscape {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        .sky {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to bottom, #ffb6c1, #ffe4e1);
+        }
+        .moon {
+            position: absolute;
+            top: 10%;
+            left: 80%;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px white;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 10px white; }
+            to { box-shadow: 0 0 30px white; }
+        }
+        .clouds {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 100px;
+            height: 50px;
+            background: white;
+            border-radius: 50px;
+            animation: floatClouds 5s infinite alternate ease-in-out;
+        }
+        @keyframes floatClouds {
+            from { transform: translateX(0); }
+            to { transform: translateX(50px); }
+        }
+        .hot-air-balloon {
+            position: absolute;
+            bottom: 30%;
+            left: 10%;
+            width: 50px;
+            height: 70px;
+            background: red;
+            border-radius: 50%;
+            animation: floatUp 4s infinite alternate ease-in-out;
+        }
+        @keyframes floatUp {
+            from { transform: translateY(0); }
+            to { transform: translateY(-30px); }
+        }
+        .car {
+            position: absolute;
+            bottom: 10%;
+            left: 20%;
+            width: 80px;
+            height: 40px;
+            background: red;
+            border-radius: 10px;
+            animation: drive 6s infinite linear;
+        }
+        @keyframes drive {
+            from { transform: translateX(-100px); }
+            to { transform: translateX(100vw); }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="cityscape">
+        <div class="sky">
+            <div class="moon"></div>
+            <div class="stars"></div>
+            <div class="clouds"></div>
+            <div class="hot-air-balloon"></div>
+        </div>
+        
+        <div class="buildings">
+            <div class="building" id="shop">
+                <span class="sign">Love Café</span>
+            </div>
+            <div class="building" id="home">
+                <span class="sign">Romance Suites</span>
+            </div>
+        </div>
+        
+        <div class="street">
+            <div class="road">
+                <div class="car"></div>
+                <div class="traffic-light"></div>
+            </div>
+            <div class="sidewalk">
+                <div class="bench"></div>
+                <div class="couple"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
